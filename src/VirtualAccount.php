@@ -21,6 +21,7 @@ class VirtualAccount extends Entity
 
     public function close($id)
     {
+<<<<<<< HEAD
         $relativeUrl = $this->getEntityUrl() . $id . '/close';
 
         $data = array(
@@ -28,6 +29,12 @@ class VirtualAccount extends Entity
         );
 
         return $this->request('POST', $relativeUrl, $data);
+=======
+        $relativeUrl = $this->getEntityUrl() . $this->id . '/close';
+
+
+        return $this->request('POST', $relativeUrl);
+>>>>>>> 93638edd548f0c402ddccc45d5a05ed75cb63201
     }
 
     public function payments()
